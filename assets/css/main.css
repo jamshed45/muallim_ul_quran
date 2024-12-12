@@ -1,0 +1,56 @@
+.long-link-cl { font-size: 13px !important;}
+
+body[data-sidebar=dark] .navbar-brand-box {
+    background: #ffffff;
+}
+body[data-sidebar=dark] .vertical-menu {
+    background: #2D6192;
+}
+
+body[data-sidebar=dark] .menu-title {
+    color: #f7fbff !important;
+}
+
+body[data-sidebar=dark] #sidebar-menu ul li a, body[data-sidebar=dark] #sidebar-menu ul li a i {
+    color: #ffffff;
+}
+body[data-sidebar=dark] #sidebar-menu ul>li>a.mm-active {
+    background-color: #294284;
+}
+body[data-sidebar=dark] .mm-active .active {
+    color: #b4c9de !important;
+    background-color: #294284;
+}
+
+#page-topbar
+{
+    background-color: #294284;
+}
+.header-item, .header-item:hover {
+    color: #ffffff;
+}
+.noti-icon i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.btn-success {
+
+
+}
+
+.card-content-pl { padding-left: 30px; }
+
+.mini-stat-leadflo-bg { background-color: #294284 !important; }
+
+.bg-light-blue { background-color: aliceblue; }
+.bg-light-gray { background-color: #f1f1f1; padding: 10px; }
+
+.permission-disabled-form { pointer-events: none;
+    opacity: 0.6;
+}
+
+.permission-checkbox-disbaled { pointer-events: none;
+    opacity: 0.6;
+}
+
