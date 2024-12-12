@@ -60,28 +60,15 @@ class LoginController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
+
+
         if ($user && \Hash::check($request->password, $user->password)) {
-            if ($email_otp != 1) {
+
 
                 Auth::login($user);
 
                 return redirect()->route('index');
-            } else {
 
-                $verificationCode = rand(100000, 999999);
-
-                $user->verification_code = $verificationCode;
-                $user->verification_code_expires_at = Carbon::now()->addMinutes(10);
-                $user->save();
-
-                Mail::raw("Your verification code is: $verificationCode", function ($message) use ($user) {
-                    $message->to($user->email)->subject('Verification Code');
-                });
-
-                session(['unverified_user_id' => $user->id]);
-
-                return redirect()->route('verify.show');
-            }
         } else {
             return back()->withErrors([
                 'email' => 'Invalid email or password',

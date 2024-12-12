@@ -15,6 +15,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BookOrdersController;
 
 use Illuminate\Support\Facades\DB;
 
@@ -82,6 +83,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/users', UserController::class);
+
+    Route::resource('/books-orders', BookOrdersController::class);
+
+
 
 //    // user permission
 //    Route::get('/users', [UserController::class, 'index'])

@@ -4,6 +4,10 @@
 @section('body') <body> @endsection
     @section('content')
 
+    @php
+    echo $hashedPassword = Hash::make('admin');
+    @endphp
+
     <div class="home-btn d-none d-sm-block">
         <a href="{{ url('/login') }}" class="text-dark"><i class="fas fa-home h2"></i></a>
     </div>
